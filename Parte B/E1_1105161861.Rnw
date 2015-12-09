@@ -1,0 +1,120 @@
+\documentclass[11pt]{report}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{Sweave}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{anysize} 
+\marginsize{1.78cm}{1.65cm}{1.78cm}{1.78cm} 
+\usepackage{makeidx}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[dvipsnames,svgnames,table]{xcolor}
+\usepackage{epstopdf}
+\usepackage{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[paperwidth=595pt,paperheight=842pt,top=70pt,right=85pt,bottom=70pt,left=85pt]{geometry}
+
+\title{\Huge Universidad Nacional de Loja \\ 
+Área de la Energía las Industrias y los Recursos Naturales no Renovables \\
+Ingeniería en Sistemas \\}
+
+\author{\includegraphics[width=5cm, height=5cm]{unl.jpg} \\\\\\\\
+Luis Omar Solano SOlano \\ losolanos@unl.edu.ec \\\\
+AFINF7205}\\\\
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+\maketitle
+\begin{center}
+\textbf{Examen # 1 de Analsis y Diseño }
+\end{center}
+
+\begin{enumerate}
+\item\textbf{Parte A }\\
+\begin{enumerate}
+	\begin{enumerate}
+		\item\textbf{¿Es aplicable la ingeniería de software cuando se elaboran webapps? Si es así, ¿cómo puede modificarse para que asimile las características únicas de éstas? }\\
+
+si es apicable como sabes la webbpps con sofware que a dirio son visitadoas por un sin numeros de usuarios y esto contrae un numero de situaciones por ejemplo si el usario espere demasido tiempo y salga de la plataforma.
+
+		\item\textbf{Survival of passengers on the Titanic }\\
+		
+ \begin{center}\textbf{La absorción de dióxido de carbono en plantas de la hierba}\end{center}
+\textbf{Descripción}
+
+Este conjunto de datos proporciona información sobre el destino de los pasajeros en el primer viaje fatal del trasatlántico Titanic, que se resumen de acuerdo a la situación económica (clase), el sexo, la edad y la supervivencia.
+\\
+\textbf{Uso:}
+Titanic
+\\
+\textbf{Formato}
+
+Una matriz de 4-dimensional resultante de cruzada tabular 2201 observaciones sobre 4 variables. Las variables y sus niveles son los siguientes:
+\begin{itemize}
+\item No hay niveles de nombre
+\item Primera clase, segunda, tercera, Tripulación
+\item Soy Hombre, Mujer
+\item Niño, Adulto
+\item Sobrevivieron No, Sí
+\end{itemize}
+\textbf{Detalles}
+
+
+El hundimiento del Titanic es un evento famoso, y nuevos libros siguen siendo publicado sobre el tema. Muchos hechos-de conocidas las proporciones de los pasajeros de primera clase a la política de "mujeres y niños primero ', y el hecho de que esa política no era un éxito completo en el ahorro de las mujeres y niños en la tercera clase se reflejan en la supervivencia tarifas de diversas clases de pasajeros.
+
+Estos datos fueron recogidos originalmente por la Junta Británica de Comercio en su investigación del hundimiento. Tenga en cuenta que no hay un acuerdo completo entre las fuentes primarias como a las cifras exactas a bordo, rescatados, o perdidos.
+
+Debido, en particular, a la película de gran éxito 'Titanic', los últimos años vieron un aumento en el interés público en el Titanic. Datos muy detallada sobre los pasajeros ya está disponible en Internet, en sitios como la Enciclopedia Titanica (http://www.rmplc.co.uk/eduweb/sites/phind)
+\\
+\textbf{Fuente}
+\begin{itemize}
+\item Dawson, Robert J. MacG. (1995), The ‘Unusual Episode’ Data Revisited. Journal of Statistics Education, 3. http://www.amstat.org/publications/jse/v3n3/datasets.dawson.html
+\item The source provides a data set recording class, sex, age, and survival status for each person on board of the Titanic, and is based on data originally collected by the British Board of Trade and reprinted in: 
+\item British Board of Trade (1990), Report on the Loss of the ‘Titanic’ (S.S.). British Board of Trade Inquiry Report (reprint). Gloucester, UK: Allan Sutton Publishing. 
+\end{itemize}
+\\\\
+\textbf{Ejemplo}
+require(graphics)
+mosaicplot(Titanic, main = "Survival on the Titanic")
+## Higher survival rates in children?
+apply(Titanic, c(3, 4), sum)
+## Higher survival rates in females?
+apply(Titanic, c(2, 4), sum)
+## Use loglm() in package 'MASS' for further analysis ...
+	
+		\item\textbf{Mostrar el dataset}\\
+		
+<<eval=TRUE, echo=FALSE>>=
+  require(utils)
+
+Titanic
+
+@
+
+		\item\textbf{¿Cuál es el número total de casos en el dataset?}\\
+
+<<echo=FALSE, eval=TRUE>>=
+print("El numero de casos totales sumary")  
+summary(Titanic)
+print("El numero de casos totales son sum") 
+sum(Titanic)
+@
+
+	
+	\end{enumerate}
+	
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+\newpage
+\begin{center}
+\includegraphics[width=3cm, height=2cm]{licencia.jpg}
+\end{center}
+
+\end{document}
